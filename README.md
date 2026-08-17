@@ -1,75 +1,48 @@
-# React + TypeScript + Vite
+# ✨ Landing Page - Dra. Camila Torres | Estética Médica Avançada
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Landing page institucional de alta conversão desenvolvida para clínica de estética facial e corporal, combinando sofisticação visual, usabilidade fluida e performance otimizada.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+* **React** — Biblioteca para construção de interfaces reativas e declarativas
+* **TypeScript** — Tipagem estática para robustez e manutenibilidade
+* **Vite** — Build tool rápida e otimizada
+* **CSS Modules / Scoped Architecture** — Isolamento modular de estilos por componente
+* **Git & GitHub** — Versionamento de código
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 💎 Principais Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* 📱 **Design 100% Responsivo:** Layout adaptável para smartphones, tablets e desktops.
+* 🔄 **Slider Interativo Antes & Depois:** Componente comparativo interativo em tempo real para exibição de resultados de procedimentos.
+* 📑 **Arquitetura Modular:** Componentes independentes com pastas dedicadas (`Hero`, `ValueProps`, `Procedures`, `BeforeAfter`, `About`, `Faq`, `FinalCta`, `Footer`).
+* 💬 **CTAs Estratégicos:** Botões diretos para agendamento e contato via WhatsApp.
+* ❓ **FAQ Interativo:** Seção de dúvidas frequentes com animação sanfona (*accordion*).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Estrutura de Pastas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
+```text
+src/
+├── assets/
+│   └── images/
+│       ├── about/
+│       ├── before-after/
+│       ├── hero/
+│       └── procedures/
+├── components/
+│   ├── About/
+│   ├── BeforeAfter/
+│   ├── Faq/
+│   ├── FinalCta/
+│   ├── Footer/
+│   ├── Hero/
+│   ├── Navbar/
+│   ├── Procedures/
+│   └── ValueProps/
+├── App.tsx
+└── main.tsx
