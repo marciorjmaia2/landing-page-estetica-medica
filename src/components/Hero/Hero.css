@@ -1,116 +1,148 @@
 .hero-section {
   display: flex;
   flex-direction: column;
-  padding: 40px 20px;
-  max-width: 1200px;
+  padding: 40px 24px;
+  max-width: 1240px;
   margin: 0 auto;
-  gap: 32px;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-content {
+  width: 100%;
 }
 
 .hero-gold-line {
-  width: 48px;
+  width: 50px;
   height: 2px;
-  background: #d4af37;
-  margin-bottom: 16px;
+  background: #c5a880;
+  margin-bottom: 20px;
 }
 
 .hero-badge {
   display: inline-block;
-  font-size: 0.8rem;
-  letter-spacing: 1px;
+  font-size: 0.78rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: #d4af37;
-  background: rgba(212, 175, 55, 0.1);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  padding: 6px 14px;
+  color: #c5a880;
+  background: rgba(197, 168, 128, 0.1);
+  border: 1px solid rgba(197, 168, 128, 0.3);
+  padding: 8px 16px;
   border-radius: 50px;
-  margin-bottom: 16px;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 .hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.2rem;
-  line-height: 1.2;
-  color: #f7f7f8;
-  margin-bottom: 16px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 2.4rem;
+  line-height: 1.25;
+  color: #1a1a1a;
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .hero-title em {
   font-style: italic;
-  color: #d4af37;
+  color: #c5a880;
+  font-weight: 400;
 }
 
 .hero-description {
-  color: #a0a6b1;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 24px;
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+  max-width: 500px;
 }
 
 .hero-cta-group {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-bottom: 28px;
+  margin-bottom: 36px;
 }
 
 .hero-btn-primary {
-  display: inline-block;
-  background: #d4af37;
-  color: #0f1115;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #c5a880;
+  color: #ffffff;
   font-weight: 600;
-  padding: 16px 28px;
+  font-size: 0.95rem;
+  padding: 16px 32px;
   border-radius: 8px;
   text-decoration: none;
-  text-align: center;
-  transition: opacity 0.2s;
+  box-shadow: 0 10px 25px rgba(197, 168, 128, 0.35);
+  transition: all 0.3s ease;
 }
 
 .hero-btn-primary:hover {
-  opacity: 0.9;
+  background: #b39368;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(197, 168, 128, 0.45);
 }
 
 .hero-link-results {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  color: #f7f7f8;
+  color: #333333;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 12px;
+  transition: color 0.2s;
+}
+
+.hero-link-results:hover {
+  color: #c5a880;
 }
 
 .hero-trust-bar {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
+  gap: 14px;
 }
 
 .hero-stars {
   display: flex;
-  gap: 3px;
+  gap: 4px;
+}
+
+.hero-stars svg {
+  width: 18px;
+  height: 18px;
+  fill: #c5a880;
 }
 
 .hero-trust-text {
-  font-size: 0.85rem;
-  color: #a0a6b1;
+  font-size: 0.9rem;
+  color: #777777;
 }
 
 .hero-trust-text strong {
-  color: #f7f7f8;
+  color: #1a1a1a;
+  font-weight: 700;
 }
 
+/* Coluna da Imagem */
 .hero-image-wrapper {
   position: relative;
   width: 100%;
-  border-radius: 16px;
+  max-width: 520px;
+  border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
 }
 
 .hero-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  max-height: 600px;
+  object-fit: cover;
   display: block;
 }
 
@@ -119,44 +151,46 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(15, 17, 21, 0.85) 0%,
-    transparent 60%
+    rgba(0, 0, 0, 0.4) 0%,
+    transparent 50%
   );
+  pointer-events: none;
 }
 
 .hero-credential-card {
   position: absolute;
-  bottom: 16px;
-  left: 16px;
-  right: 16px;
-  background: rgba(24, 27, 32, 0.9);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  padding: 14px 18px;
-  border-radius: 10px;
+  bottom: 24px;
+  left: 24px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 16px 20px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
 }
 
 .hero-card-tag {
   font-size: 0.7rem;
-  color: #d4af37;
+  color: #c5a880;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
 }
 
 .hero-card-title {
-  color: #f7f7f8;
+  color: #1a1a1a;
   font-size: 0.9rem;
   font-weight: 600;
-  margin-top: 2px;
+  margin-top: 4px;
 }
 
-/* Telas maiores (Desktop) */
+/* Layout Desktop */
 @media (min-width: 992px) {
   .hero-section {
     flex-direction: row;
-    align-items: center;
     justify-content: space-between;
-    padding: 60px 20px;
+    padding: 60px 24px 80px;
+    min-height: 80vh;
   }
 
   .hero-content {
@@ -165,23 +199,18 @@
   }
 
   .hero-title {
-    font-size: 3.2rem;
+    font-size: 3.4rem;
   }
 
   .hero-cta-group {
     flex-direction: row;
     align-items: center;
+    gap: 20px;
   }
 
   .hero-image-wrapper {
     flex: 1;
     max-width: 480px;
-  }
-
-  .hero-credential-card {
-    left: 20px;
-    right: auto;
-    bottom: 20px;
-    max-width: 260px;
+    height: 600px;
   }
 }
