@@ -1,0 +1,149 @@
+.about-section {
+  padding: clamp(64px, 8vw, 120px) clamp(16px, 4vw, 48px);
+  background-color: #FBF9F7;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: clamp(280px, 38%, 440px) 1fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.about-photo-wrapper {
+  position: relative;
+}
+
+.about-photo-frame {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: -16px;
+  bottom: -16px;
+  border-radius: 20px;
+  border: 2px solid rgba(212, 175, 55, 0.35);
+  z-index: 0;
+}
+
+.about-photo-container {
+  position: relative;
+  z-index: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+}
+
+.about-photo {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-badge {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #C9A96E;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.about-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #1E1E1E;
+}
+
+.about-tags {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.about-tag {
+  font-size: 11px;
+  font-weight: 600;
+  background-color: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  color: #C9A96E;
+}
+
+.about-text {
+  font-size: 15px;
+  color: #555555;
+  line-height: 1.75;
+  margin: 0 0 28px;
+}
+
+.about-certs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 0 0 32px;
+  padding: 0;
+  list-style: none;
+}
+
+.about-cert-item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.about-cert-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #D4AF37;
+  margin-top: 7px;
+  flex-shrink: 0;
+}
+
+.about-cert-text {
+  font-size: 14px;
+  color: #555555;
+  line-height: 1.5;
+}
+
+.about-quote {
+  border-left: 3px solid #D4AF37;
+  padding-left: 18px;
+  margin: 0 0 20px;
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 16px;
+  color: #3D3D3D;
+  line-height: 1.6;
+}
+
+.about-signature {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 20px;
+  color: #D4AF37;
+  font-style: italic;
+}
+
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+
+  .about-photo-wrapper {
+    max-width: 360px;
+    margin: 0 auto 32px;
+  }
+}

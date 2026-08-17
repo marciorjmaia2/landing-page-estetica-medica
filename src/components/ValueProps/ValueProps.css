@@ -1,0 +1,42 @@
+.value-props-section {
+  background-color: #1E1E1E;
+  color: #ffffff;
+  padding: clamp(32px, 5vw, 56px) clamp(16px, 4vw, 48px);
+}
+
+.value-props-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(24px, 3vw, 48px);
+}
+
+.value-prop-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.value-prop-icon {
+  color: #D4AF37;
+  font-size: 12px;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.value-prop-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  line-height: 1.3;
+  margin: 0 0 4px 0;
+}
+
+.value-prop-desc {
+  font-size: 13px;
+  color: #999999;
+  line-height: 1.5;
+  margin: 0;
+}
