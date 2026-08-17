@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import ValueProps from './components/ValueProps/ValueProps'
@@ -7,8 +8,17 @@ import About from './components/About/About'
 import Faq from './components/Faq/Faq'
 import FinalCta from './components/FinalCta/FinalCta'
 import Footer from './components/Footer/Footer'
+import PasswordGate from './components/PasswordGate/PasswordGate'
 
 export default function App() {
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(() => {
+    return sessionStorage.getItem('portfolio_auth') === 'true'
+  })
+
+  if (!isAuthenticated) {
+    return <PasswordGate onUnlock={() => setIsAuthenticated(true)} />
+  }
+
   return (
     <div className="landing-app">
       <Navbar />

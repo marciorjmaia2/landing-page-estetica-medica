@@ -1,12 +1,13 @@
 import './Hero.css'
-import heroImage from '../../assets/images/hero/hero-dra-camila.jpg' // <-- Importação da imagem local
+import heroImage from '../../assets/images/hero/hero-dra-camila.jpg'
 
-const WHATSAPP_URL = 'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Torres.'
+const WHATSAPP_URL =
+  'https://wa.me/5511999999999?text=Ol%C3%A1%2C%20gostaria%20de%20agendar%20uma%20consulta%20com%20a%20Dra.%20Camila%20Torres.'
 
 function StarIcon() {
   return (
     <svg width={16} height={16} viewBox="0 0 24 24" fill="#D4AF37">
-      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
     </svg>
   )
 }
@@ -63,12 +64,14 @@ export default function Hero() {
           className="hero-image"
         />
         <div className="hero-image-gradient" />
-        
+
         <div className="hero-credential-card">
           <div className="hero-card-tag">Certificação Internacional</div>
           <div className="hero-card-title">Harvard Medical School Training</div>
           <div className="hero-stars" style={{ marginTop: '8px' }}>
-            {[...Array(5)].map((_, i) => <StarIcon key={i} />)}
+            {[...Array(5)].map((_, i) => (
+              <StarIcon key={i} />
+            ))}
           </div>
         </div>
       </div>
